@@ -1,0 +1,4 @@
+chef-client --local-mode webserver.rb -- Apply one recipe
+chef generate cookbook cookbooks/learn_chef_apache2 -- Generate cookbook
+chef generate template cookbooks/learn_chef_apache2 index.html -- Generate template
+chef-client --local-mode --runlist 'recipe[learn_chef_apache2]' -- Apply Cookbook
