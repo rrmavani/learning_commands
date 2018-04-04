@@ -2,3 +2,5 @@ chef-client --local-mode webserver.rb -- Apply one recipe
 chef generate cookbook cookbooks/learn_chef_apache2 -- Generate cookbook
 chef generate template cookbooks/learn_chef_apache2 index.html -- Generate template
 chef-client --local-mode --runlist 'recipe[learn_chef_apache2]' -- Apply Cookbook
+
+knife bootstrap 35.229.89.235 --ssh-user rrmavani --sudo --node-name chef --run-list 'recipe[learn_chef_apache2]' -- bootstrap chaf node
