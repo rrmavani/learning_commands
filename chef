@@ -9,3 +9,8 @@ knife cookbook list -- list cookbooks in chef-server
 knife node list -- list nodes in an org
 knife bootstrap 35.229.89.235 --ssh-user rrmavani --sudo --node-name chef --run-list 'recipe[learn_chef_apache2]' -- bootstrap chaf node
 knife ssh 'name:chef' 'sudo chef-client' -x rrmavani -a cloud_v2.public_ipv4 -- ssh command to node
+
+ knife role from file .\roles\web.json -- create role
+ knife role list -- list roles
+ knife role show web -- view web role
+ knife node run_list set chef "role[web]" -- apply role to 'chef' server
