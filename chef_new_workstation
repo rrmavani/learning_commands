@@ -4,5 +4,9 @@ sudo apt-get install git
 git config --global user.name "rushabh mavani"
 git config --global user.email "rrmavani@gmail.com"
 
-mkdir ~/chef-repo
-cd chef-repo/
+
+mkdir ~/learn-chef/.chef
+cd ~/learn-chef/.chef
+Download key from chef manager -- Administration > Organizations > "Your Org" > Reset Validation Key
+Download knife config from chef manager -- Administration > Organizations > "Your Org" > Generate Knife Config
+knife ssl check -- This will check connectivity with chef server
