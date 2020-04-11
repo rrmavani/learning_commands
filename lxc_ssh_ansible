@@ -1,0 +1,121 @@
+    1  cat /etc/issue
+    2  which git
+    3  apt-get install git-core
+    4  git clone https://github.com/ansible/ansible.git
+    5  ll
+    6  mkdir code
+    7  mv ansible code
+    8  ll
+    9  cd code/
+   10  ll
+   11  cd ansible/
+   12  git submodule update --init --recursive
+   13  git submodule update
+   14  git submodule update --init --help
+   15  git submodule update --init --recursive
+   16  git pull
+   17  git submodule update --init --recursive
+   18  apt-get install python-jinja2 python-paramiko python-yaml sshpass
+   19  apt-get install sshpass
+   20  apt-get install python-jinja2 python-paramiko python-yaml
+   21  apt-get update python
+   22  apt-get update
+   23  sshpass
+   24  sudo apt-get install -y sshpass
+   25  apt-get install sshpass
+   26  source ./hacking/env-setup
+   27  ansible
+   28  which ansible
+   29  ansible --version
+   30  apt-get install lxc
+   31  top
+   32  ll
+   33  cd code
+   34  ll
+   35  cd ansible/
+   36  ll
+   37  cd ..
+   38  cd ansible_course
+   39  mkdir ansible_course
+   40  cd ansible_course
+   41  ll
+   42  vim ansible.cfg
+   43  apt-get install vim
+   44  vim ansible.cfg
+   45  ll
+   46  lxc-lc -l
+   47  lxc-ls -f
+   48  lxc-ls -f | aws '{print $5}'
+   49  lxc-ls -f | awk '{print $5}'
+   50  lxc-ls -f | awk '{print $5}' | grep -iv ipv
+   51  vim inventory
+   52  source ../ansible/hacking/env-setup
+   53  apt-get install python-setuptools
+   54  source ../ansible/hacking/env-setup
+   55  ls
+   56  ansible all -m ping -i inventory 
+   57  vim ansible.cfg 
+   58  ansible all -m ping -i inventory
+   59  lxc-ls -f | awk '{print $5}'
+   60  ssh-add  --help
+   61  ansible all -m ping -i inventory -u root
+   62  ansible all -m ping -i inventory -u root -k
+   63  ls -l
+   64  chmod 777 *
+   65  ll
+   66  ansible all -m ping -i inventory -u root -k
+   67  lxc-ls -f | awk '{print $5}'
+   68  cat inventory 
+   69  ansible all -m ping -i inventory -u root -k
+   70  ssh 10.0.3.86
+   71  >
+   72  >/root/.ssh/known_hosts 
+   73  ansible all -m ping -i inventory -u root -k
+   74  ansible all -m ping -i inventory -u ubuntu -k
+   75  ansible --version
+   76  vim ansible.cfg 
+   77  ansible all -m ping -i inventory -u ubuntu -k
+   78  ssh-add -L
+   79  man ssh-add
+   80  ssh-add --help
+   81  vim 
+   82  ls
+   83  vim ansible.cfg 
+   84  ansible all -m ping -i inventory -u ubuntu -k
+   85  eval `ssh-agent`
+   86  echo $SSH_AGENT_SOCK
+   87  ssh-keygen -t rsa
+   88  lxc-ls -f | awk '{print $5}'
+   89  for i in $(lxc-ls -f | awk '{print $5}' | grep -iv ipv); do scp ~/.ssh/id_rsa.pub ubuntu@$i:/home/ubuntu/; done
+   90  $SSH_AGENT_PID
+   91  echo $SSH_AGENT_PID
+   92  ssh-add ~/.ssh/id_rsa
+   93  ls -l .ssh/
+   94  ls -l ~/.ssh/
+   95  ls -l ~/
+   96  ls -la ~/
+   97  ssh-add -L
+   98  ansible all -m ping -i inventory -u root
+   99  ansible all -a "free -m" -i inventory -u root
+  100  ansible web -m ping -i inventory -u root
+  101  ansible database -m ping -i inventory -u root
+  102  ansible web -a "dpkg -l | grep -i nginx" -i inventory -u root
+  103  ansible web -a "apt-get update" -i inventory -u root
+  104  ansible all -a "apt-get -y update" -i inventory -u root
+  105  ansible web -a "apt-get -y install  nginx" -i inventory -u root
+  106  ansible web -m service -a "name=nginx state=restart" -i inventory -u root
+  107  ansible web -m service -a "name=nginx state=restarted" -i inventory -u root
+  108  ansible web -m service -a "name=nginx state=status" -i inventory -u root
+  109  ansible web -a "service nginx statusn" -i inventory -u root
+  110  ansible web -a "service nginx status" -i inventory -u root
+  111  history
+  112  cd ~
+  113  ll
+  114  ls -l
+  115  git clone https://github.com/rrmavani/learning_commands.git
+  116  dir
+  117  ls
+  118  cd learning_commands/
+  119  l
+  120  ll
+  121  history > ~/learning_commands/lxc_ssh_ansible
